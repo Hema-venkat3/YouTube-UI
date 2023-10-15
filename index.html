@@ -17,7 +17,7 @@
 
 <body>
   <!-- Header section -->
-  <section class="flex items-center justify-between px-5">
+  <section class="flex items-center justify-between px-5 relative">
     <div class="flex items-center space-x-4 ">
       <!-- menu icon -->
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" class=" rounded-full">
@@ -42,25 +42,27 @@
       </svg>
       <!-- microphone icon -->
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-        class="bg-gray-200 text-gray-700 p-2 rounded-full">
+        class="bg-gray-200 text-gray-700 p-2 rounded-full hover:text-zinc-900">
         <path fill="currentColor"
           d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3m7 9c0 3.53-2.61 6.44-6 6.93V21h-2v-3.07c-3.39-.49-6-3.4-6-6.93h2a5 5 0 0 0 5 5a5 5 0 0 0 5-5h2Z" />
       </svg>
     </div>
     <div class="flex items-center space-x-4">
       <!-- create video -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" class="text-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+        class="text-gray-700 hover:text-zinc-900">
         <path fill="currentColor"
           d="M10 16q.425 0 .713-.288T11 15v-2h2q.425 0 .713-.288T14 12q0-.425-.288-.713T13 11h-2V9q0-.425-.288-.713T10 8q-.425 0-.713.288T9 9v2H7q-.425 0-.713.288T6 12q0 .425.288.713T7 13h2v2q0 .425.288.713T10 16Zm-6 4q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h12q.825 0 1.413.588T18 6v4.5l3.15-3.15q.225-.225.537-.113T22 7.7v8.6q0 .35-.313.463t-.537-.113L18 13.5V18q0 .825-.588 1.413T16 20H4Zm0-2h12V6H4v12Zm0 0V6v12Z" />
       </svg>
       <!-- notification -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" class="text-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+        class="text-gray-700 hover:text-zinc-900">
         <path fill="currentColor"
           d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
       </svg>
       <!-- account profile -->
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
-        class="text-white p-0.5 bg-blue-700 rounded-full">
+        class="text-white p-0.5 bg-blue-700 rounded-full hover:text-gray-200">
         <path fill="currentColor" d="M7 17V7h2v4h6V7h2v10h-2v-4H9v4H7Z" />
       </svg>
     </div>
@@ -68,279 +70,725 @@
   <!-- End of header section -->
 
   <!-- left menu section -->
-  <section class="">
-    <div class="w-52 float-left">
-      <div class="">
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="text-zinc-800">
-            <path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7H4Z" />
-          </svg>
-          <span>Home</span>
-        </div>
-        <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M13.05 9.79L10 7.5v9l3.05-2.29L16 12l-2.95-2.21zm0 0L10 7.5v9l3.05-2.29L16 12l-2.95-2.21zm0 0L10 7.5v9l3.05-2.29L16 12l-2.95-2.21zM11 4.07V2.05c-2.01.2-3.84 1-5.32 2.21L7.1 5.69A7.941 7.941 0 0 1 11 4.07zM5.69 7.1L4.26 5.68A9.949 9.949 0 0 0 2.05 11h2.02c.18-1.46.76-2.79 1.62-3.9zM4.07 13H2.05c.2 2.01 1 3.84 2.21 5.32l1.43-1.43A7.868 7.868 0 0 1 4.07 13zm1.61 6.74A9.981 9.981 0 0 0 11 21.95v-2.02a7.941 7.941 0 0 1-3.9-1.62l-1.42 1.43zM22 12c0 5.16-3.92 9.42-8.95 9.95v-2.02C16.97 19.41 20 16.05 20 12s-3.03-7.41-6.95-7.93V2.05C18.08 2.58 22 6.84 22 12z" />
-          </svg>
-          <span>Shorts</span>
-        </div>
-        <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <g fill="none" stroke="currentColor" stroke-width="1.5">
-              <path
-                d="M19.562 7a2.132 2.132 0 0 0-2.1-2.5H6.538a2.132 2.132 0 0 0-2.1 2.5M17.5 4.5c.028-.26.043-.389.043-.496a2 2 0 0 0-1.787-1.993C15.65 2 15.52 2 15.26 2H8.74c-.26 0-.391 0-.497.011a2 2 0 0 0-1.787 1.993c0 .107.014.237.043.496m8.082 9.116c.559.346.559 1.242 0 1.588l-3.371 2.09c-.543.337-1.21-.1-1.21-.794v-4.18c0-.693.667-1.13 1.21-.794l3.371 2.09Z" />
-              <path
-                d="M2.384 13.793c-.447-3.164-.67-4.745.278-5.77C3.61 7 5.298 7 8.672 7h6.656c3.374 0 5.062 0 6.01 1.024c.947 1.024.724 2.605.278 5.769l-.422 3c-.35 2.48-.525 3.721-1.422 4.464c-.897.743-2.22.743-4.867.743h-5.81c-2.646 0-3.97 0-4.867-.743c-.897-.743-1.072-1.983-1.422-4.464l-.422-3Z" />
-            </g>
-          </svg>
-          <span>Subscriptions</span>
-        </div>
-        <hr class="text-gray-400" />
-        <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M17.525 10.625q.35-.225.35-.625t-.35-.625L12.65 6.25q-.375-.25-.763-.038t-.387.663v6.25q0 .45.388.663t.762-.038l4.875-3.125ZM8 18q-.825 0-1.413-.588T6 16V4q0-.825.588-1.413T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.588 1.413T20 18H8Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.413-.588T2 20V7q0-.425.288-.713T3 6q.425 0 .713.288T4 7v13h13q.425 0 .713.288T18 21q0 .425-.288.713T17 22H4ZM8 4v12V4Z" />
-          </svg>
-          <span>Library</span>
-        </div>
-        <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89l.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54l.72-1.21l-3.5-2.08V8H12z" />
-          </svg>
-          <span>History</span>
-        </div>
-        <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M21 3H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5a2 2 0 0 0-2-2zm0 14H3V5h18v12zm-5-6l-7 4V7z" />
-          </svg>
-          <span>Your videos</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8zm.5-13H11v6l5.2 3.2l.8-1.3l-4.5-2.7V7z" />
-          </svg>
-          <span>Watch later</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M18 21H7V8l7-7l1.25 1.25q.175.175.288.475t.112.575v.35L14.55 8H21q.8 0 1.4.6T23 10v2q0 .175-.05.375t-.1.375l-3 7.05q-.225.5-.75.85T18 21Zm-9-2h9l3-7v-2h-9l1.35-5.5L9 8.85V19ZM9 8.85V19V8.85ZM7 8v2H4v9h3v2H2V8h5Z" />
-          </svg>
-          <span>Liked videos</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor" d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z" />
-          </svg>
-          <span>Show more</span>
-        </div>
-        <hr class="text-gray-400" />
-        <div class="px-5 py-3 font-semibold">Subscriptions</div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <img src="./public/images/l-1.jpg" alt="Simplilearn" width="25" height="25" class="rounded-full">
-          <span>Simplilearn</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <img src="./public/images/l-2.jpg" alt="irfansview" width="25" height="25" class="rounded-full">
-          <span>Afrah Irfansview</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <img src="./public/images/l-3.jpg" alt="anaanthika sunilumar" width="25" height="25" class="rounded-full">
-          <span>Ananthika Sunilkumar</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <img src="./public/images/l-4.jpg" alt="anuyoked" width="25" height="25" class="rounded-full">
-          <span>Anbudan anuyoked</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <img src="./public/images/l-5.jpg" alt="asia" width="25" height="25" class="rounded-full">
-          <span>Ani-one Asia</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.5.88 4.93 1.78A7.893 7.893 0 0 1 12 20c-1.86 0-3.57-.64-4.93-1.72m11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33A7.928 7.928 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.5-1.64 4.83M12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6m0 5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 8a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 11Z" />
-          </svg>
-          <span>Aravind Talks</span>
-        </div>
-        <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-            <path fill="currentColor" d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z" />
-          </svg>
-          <span>Show more</span>
-        </div>
-        <hr class="text-gray-400" />
+  <section class="float-left absolute top-20 left-0">
+    <div class="w-fit">
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="text-zinc-800">
+          <path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7H4Z" />
+        </svg>
+        <span>Home</span>
       </div>
+      <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+
+        <img src="./public/images/s-1.png" alt="shorts" width="20" height="20">
+        <span>Shorts</span>
+      </div>
+      <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path
+              d="M19.562 7a2.132 2.132 0 0 0-2.1-2.5H6.538a2.132 2.132 0 0 0-2.1 2.5M17.5 4.5c.028-.26.043-.389.043-.496a2 2 0 0 0-1.787-1.993C15.65 2 15.52 2 15.26 2H8.74c-.26 0-.391 0-.497.011a2 2 0 0 0-1.787 1.993c0 .107.014.237.043.496m8.082 9.116c.559.346.559 1.242 0 1.588l-3.371 2.09c-.543.337-1.21-.1-1.21-.794v-4.18c0-.693.667-1.13 1.21-.794l3.371 2.09Z" />
+            <path
+              d="M2.384 13.793c-.447-3.164-.67-4.745.278-5.77C3.61 7 5.298 7 8.672 7h6.656c3.374 0 5.062 0 6.01 1.024c.947 1.024.724 2.605.278 5.769l-.422 3c-.35 2.48-.525 3.721-1.422 4.464c-.897.743-2.22.743-4.867.743h-5.81c-2.646 0-3.97 0-4.867-.743c-.897-.743-1.072-1.983-1.422-4.464l-.422-3Z" />
+          </g>
+        </svg>
+        <span>Subscriptions</span>
+      </div>
+      <hr class="text-gray-400" />
+      <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="text-zinc-700">
+          <path fill="currentColor"
+            d="M17.525 10.625q.35-.225.35-.625t-.35-.625L12.65 6.25q-.375-.25-.763-.038t-.387.663v6.25q0 .45.388.663t.762-.038l4.875-3.125ZM8 18q-.825 0-1.413-.588T6 16V4q0-.825.588-1.413T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.588 1.413T20 18H8Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.413-.588T2 20V7q0-.425.288-.713T3 6q.425 0 .713.288T4 7v13h13q.425 0 .713.288T18 21q0 .425-.288.713T17 22H4ZM8 4v12V4Z" />
+        </svg>
+        <span>Library</span>
+      </div>
+      <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="text-zinc-700">
+          <path fill="currentColor"
+            d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89l.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54l.72-1.21l-3.5-2.08V8H12z" />
+        </svg>
+        <span>History</span>
+      </div>
+      <div class="flex items-center  px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="text-zinc-700">
+          <path fill="currentColor"
+            d="M21 3H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5a2 2 0 0 0-2-2zm0 14H3V5h18v12zm-5-6l-7 4V7z" />
+        </svg>
+        <span>Your videos</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8zm.5-13H11v6l5.2 3.2l.8-1.3l-4.5-2.7V7z" />
+        </svg>
+        <span>Watch later</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M18 21H7V8l7-7l1.25 1.25q.175.175.288.475t.112.575v.35L14.55 8H21q.8 0 1.4.6T23 10v2q0 .175-.05.375t-.1.375l-3 7.05q-.225.5-.75.85T18 21Zm-9-2h9l3-7v-2h-9l1.35-5.5L9 8.85V19ZM9 8.85V19V8.85ZM7 8v2H4v9h3v2H2V8h5Z" />
+        </svg>
+        <span>Liked videos</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor" d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z" />
+        </svg>
+        <span>Show more</span>
+      </div>
+      <hr class="text-gray-400" />
+      <div class="px-5 py-3 font-semibold">Subscriptions</div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <img src="./public/images/l-1.jpg" alt="Simplilearn" width="25" height="25" class="rounded-full">
+        <span>Simplilearn</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <img src="./public/images/l-2.jpg" alt="irfansview" width="25" height="25" class="rounded-full">
+        <span>Afrah Irfansview</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <img src="./public/images/l-3.jpg" alt="anaanthika sunilumar" width="25" height="25" class="rounded-full">
+        <span>Ananthika Sunilkumar</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <img src="./public/images/l-4.jpg" alt="anuyoked" width="25" height="25" class="rounded-full">
+        <span>Anbudan anuyoked</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <img src="./public/images/l-5.jpg" alt="asia" width="25" height="25" class="rounded-full">
+        <span>Ani-one Asia</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.5.88 4.93 1.78A7.893 7.893 0 0 1 12 20c-1.86 0-3.57-.64-4.93-1.72m11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33A7.928 7.928 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.5-1.64 4.83M12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6m0 5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 8a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 11Z" />
+        </svg>
+        <span>Aravind Talks</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor" d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z" />
+        </svg>
+        <span>Show more</span>
+      </div>
+      <hr class="text-gray-400" />
+      <div class="px-5 py-3 font-semibold">Explore</div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M6.15.53a.39.39 0 0 0-.4 0a.26.26 0 0 0-.06.34C6.92 3 7.18 5.9 5.5 7.5a5.52 5.52 0 0 1-1.5-2A3.89 3.89 0 0 0 2 9a4.7 4.7 0 0 0 5 4.5c3.22 0 4.89-2 5-4.5c.13-3-2-6.69-5.85-8.47Z" />
+            <path d="M9.5 9a2 2 0 0 1-2 2" />
+          </g>
+        </svg>
+        <span>Trending</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M19 6h-2c0-2.8-2.2-5-5-5S7 3.2 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2m-7-3c1.7 0 3 1.3 3 3H9c0-1.7 1.3-3 3-3m7 17H5V8h14v12m-7-8c-1.7 0-3-1.3-3-3H7c0 2.8 2.2 5 5 5s5-2.2 5-5h-2c0 1.7-1.3 3-3 3Z" />
+        </svg>
+        <span>Shopping</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3m-8 16a2 2 0 1 1 2-2a2 2 0 0 1-2 2Z" />
+        </svg>
+        <span>Music</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+          <path fill="currentColor"
+            d="M13.218 4.246L7.087 6.238a.502.502 0 0 1-.24.079L4.741 7H13.5a.5.5 0 0 1 .5.5v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 12.5v-5c0-.106.033-.205.09-.287l-.195-.602A2.5 2.5 0 0 1 3.5 3.461l6.657-2.163a2.5 2.5 0 0 1 3.15 1.605l.232.713a.5.5 0 0 1-.321.63Zm-3.744.165l1.285-2.226a1.508 1.508 0 0 0-.293.064l-1.245.404l-1.308 2.265l1.56-.507Zm2.295-1.979a.515.515 0 0 1-.02.037l-.854 1.48l1.538-.5l-.077-.237a1.494 1.494 0 0 0-.587-.78Zm-3.97.683l-1.56.507L4.93 5.887l1.56-.507L7.8 3.115ZM2.923 6.54l.587-.19l1.307-2.266l-1.008.328a1.5 1.5 0 0 0-.963 1.89l.077.238ZM3 8v4.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V8H3Z" />
+        </svg>
+        <span>
+          Movies
+        </span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
+          <path fill="currentColor"
+            d="M4.353 4.334a.476.476 0 0 1 .673.01a.528.528 0 0 1-.011.742A6.978 6.978 0 0 0 3 10c0 1.99.83 3.786 2.164 5.06a.528.528 0 0 1 .023.753a.475.475 0 0 1-.662.02A7.978 7.978 0 0 1 2 10c0-2.214.9-4.218 2.353-5.666Zm10.632.752a.528.528 0 0 1-.01-.742a.476.476 0 0 1 .672-.01A7.975 7.975 0 0 1 18 10c0 2.3-.97 4.374-2.525 5.833a.475.475 0 0 1-.662-.02a.528.528 0 0 1 .023-.752A6.98 6.98 0 0 0 17 10a6.98 6.98 0 0 0-2.015-4.915ZM6.132 6.09a.464.464 0 0 1 .656.016c.208.208.187.55-.018.76A4.485 4.485 0 0 0 5.5 10c0 1.29.543 2.454 1.414 3.275c.22.207.25.561.035.776a.463.463 0 0 1-.638.028A5.486 5.486 0 0 1 4.5 10a5.48 5.48 0 0 1 1.632-3.91Zm7.098.776c-.205-.21-.226-.552-.018-.76a.464.464 0 0 1 .656-.016A5.483 5.483 0 0 1 15.5 10a5.486 5.486 0 0 1-1.81 4.08a.463.463 0 0 1-.64-.03c-.214-.214-.184-.568.036-.775A4.487 4.487 0 0 0 14.5 10a4.485 4.485 0 0 0-1.27-3.134ZM10 8.75a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5Z" />
+        </svg>
+        <span>Live</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 11h4M8 9v4m7-1h.01M18 10h.01m-.69-5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258c-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
+        </svg>
+        <span>Gaming</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M4 21q-.825 0-1.413-.588T2 19V5q0-.825.588-1.413T4 3h16q.825 0 1.413.588T22 5v14q0 .825-.588 1.413T20 21H4Zm0-2h16V5H4v14Zm3-2h10q.425 0 .713-.288T18 16q0-.425-.288-.713T17 15H7q-.425 0-.713.288T6 16q0 .425.288.713T7 17Zm0-4h2q.425 0 .713-.288T10 12V8q0-.425-.288-.713T9 7H7q-.425 0-.713.288T6 8v4q0 .425.288.713T7 13Zm6 0h4q.425 0 .713-.288T18 12q0-.425-.288-.713T17 11h-4q-.425 0-.713.288T12 12q0 .425.288.713T13 13Zm0-4h4q.425 0 .713-.288T18 8q0-.425-.288-.713T17 7h-4q-.425 0-.713.288T12 8q0 .425.288.713T13 9ZM4 19V5v14Z" />
+        </svg>
+        <span>News</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+          <path fill="currentColor"
+            d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864c.413-1.12.74-2.64.87-4.667c.03-.463.049-.952.056-1.469H3.504z" />
+        </svg>
+        <span>Sports</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" d="M10 19.5h4M10.667 22h2.666" />
+            <path
+              d="m7.41 13.68l1.105 1.04c.31.291.485.698.485 1.123C9 16.482 9.518 17 10.157 17h3.686c.639 0 1.157-.518 1.157-1.157c0-.425.176-.832.485-1.123l1.104-1.04c1.542-1.461 2.402-3.382 2.41-5.378L19 8.218C19 4.807 15.866 2 12 2S5 4.807 5 8.218v.084c.009 1.996.87 3.917 2.41 5.379Z" />
+          </g>
+        </svg>
+        <span>Learning</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+          <g fill="currentColor">
+            <path
+              d="M10.058.501a.501.501 0 0 0-.5-.501h-2.98c-.276 0-.5.225-.5.501A.499.499 0 0 1 5.582 1a.497.497 0 0 0-.497.497V2a.5.5 0 0 0 .5.5h4.968a.5.5 0 0 0 .5-.5v-.503A.497.497 0 0 0 10.555 1a.499.499 0 0 1-.497-.499Z" />
+            <path
+              d="M3.605 2a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-12a.5.5 0 0 0-.5-.5h-.5a.5.5 0 0 1 0-1h.5a1.5 1.5 0 0 1 1.5 1.5v12a1.5 1.5 0 0 1-1.5 1.5h-9a1.5 1.5 0 0 1-1.5-1.5v-12a1.5 1.5 0 0 1 1.5-1.5h.5a.5.5 0 0 1 0 1h-.5Z" />
+            <path d="M8.068 6.482c1.656-1.673 5.795 1.254 0 5.018c-5.795-3.764-1.656-6.69 0-5.018Z" />
+          </g>
+        </svg>
+        <span>Fashion & Beauty</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M14 12c0 .74-.4 1.38-1 1.72V22h-2v-8.28c-.6-.35-1-.98-1-1.72c0-1.1.9-2 2-2s2 .9 2 2zm-2-6c-3.31 0-6 2.69-6 6c0 1.74.75 3.31 1.94 4.4l1.42-1.42A3.957 3.957 0 0 1 8 12c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.19-.53 2.25-1.36 2.98l1.42 1.42A5.957 5.957 0 0 0 18 12c0-3.31-2.69-6-6-6zm0-4C6.48 2 2 6.48 2 12c0 2.85 1.2 5.41 3.11 7.24l1.42-1.42A7.987 7.987 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 2.29-.98 4.36-2.53 5.82l1.42 1.42C20.8 17.41 22 14.85 22 12c0-5.52-4.48-10-10-10z" />
+        </svg>
+        <span>Podcasts</span>
+      </div>
+      <hr class="text-gray-400" />
+      <div class="px-5 py-3 font-semibold">More from YouTube</div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16" class="text-red-600">
+          <path fill="currentColor"
+            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104l.022.26l.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105l-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006l-.087-.004l-.171-.007l-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103l.003-.052l.008-.104l.022-.26l.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007l.172-.006l.086-.003l.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+        </svg>
+        <span>YouTube Premium</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="text-red-600">
+          <path fill="currentColor"
+            d="m10 15l5-3l-5-3v6m9.45-2l2.11 1.63c.22.15.25.37.1.65l-2.02 3.47c-.14.22-.33.28-.61.19l-2.48-.99c-.66.47-1.22.8-1.69.99l-.36 2.62c-.08.28-.23.44-.5.44h-4c-.27 0-.42-.16-.5-.44l-.36-2.62c-.59-.25-1.14-.58-1.69-.99l-2.48.99c-.28.09-.47.03-.61-.19l-2.02-3.47c-.15-.28-.12-.5.1-.65L4.55 13c-.05-.23-.05-.56-.05-1c0-.44 0-.77.05-1L2.44 9.38c-.22-.16-.25-.38-.1-.66l2.02-3.47c.14-.22.33-.28.61-.19l2.48.99c.66-.47 1.22-.8 1.69-.99l.36-2.62c.08-.28.23-.44.5-.44h4c.27 0 .42.16.5.44l.36 2.62c.59.25 1.14.58 1.69.99l2.48-.99c.28-.09.47-.03.61.19l2.02 3.47c.15.28.12.5-.1.66L19.45 11c.05.23.05.56.05 1c0 .44 0 .77-.05 1Z" />
+        </svg>
+        <!-- <img src="./public/images/utube-studio.png" alt="YouTube Studio" width="40" height="40" class="rounded-full"> -->
+        <span>YouTube Studio</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="text-red-600">
+          <path fill="currentColor"
+            d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12s12-5.376 12-12S18.624 0 12 0zm0 19.104c-3.924 0-7.104-3.18-7.104-7.104S8.076 4.896 12 4.896s7.104 3.18 7.104 7.104s-3.18 7.104-7.104 7.104zm0-13.332c-3.432 0-6.228 2.796-6.228 6.228S8.568 18.228 12 18.228s6.228-2.796 6.228-6.228S15.432 5.772 12 5.772zM9.684 15.54V8.46L15.816 12l-6.132 3.54z" />
+        </svg>
+        <span>YouTube Music</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="text-red-600">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path
+              d="m18.608 17.75l-3.9.268h-.027a13.83 13.83 0 0 0-3.722.828l-2.511.908a4.111 4.111 0 0 1-3.287-.216a3.82 3.82 0 0 1-1.98-2.527l-1.376-6.05a3.669 3.669 0 0 1 .536-2.86A3.964 3.964 0 0 1 4.83 6.44l11.25-2.354c2.137-.448 4.247.85 4.713 2.9l1.403 6.162a3.677 3.677 0 0 1-.697 3.086a4.007 4.007 0 0 1-2.89 1.512v.002z" />
+            <path d="m9 10l1.208 5l4.292-4z" />
+          </g>
+        </svg>
+        <!-- <img src="./public/images/utube-kids.jpg" alt="YouTube Kids" width="40" height="40" class="rounded-full"> -->
+        <span>YouTube Kids</span>
+      </div>
+      <hr class="text-gray-400" />
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M19.43 12.98c.04-.32.07-.64.07-.98c0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98c0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03c.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73c0 .21-.02.43-.05.73l-.14 1.13l.89.7l1.08.84l-.7 1.21l-1.27-.51l-1.04-.42l-.9.68c-.43.32-.84.56-1.25.73l-1.06.43l-.16 1.13l-.2 1.35h-1.4l-.19-1.35l-.16-1.13l-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7l-1.06.43l-1.27.51l-.7-1.21l1.08-.84l.89-.7l-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13l-.89-.7l-1.08-.84l.7-1.21l1.27.51l1.04.42l.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43l.16-1.13l.2-1.35h1.39l.19 1.35l.16 1.13l1.06.43c.43.18.83.41 1.23.71l.91.7l1.06-.43l1.27-.51l.7 1.21l-1.07.85l-.89.7l.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2z" />
+        </svg>
+        <span>Settings</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor" d="m14 6l-1-2H5v17h2v-7h5l1 2h7V6h-6zm4 8h-4l-1-2H7V6h5l1 2h5v6z" />
+        </svg>
+        <span>Report history</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8zm-1-4h2v2h-2zm1.61-9.96c-2.06-.3-3.88.97-4.43 2.79c-.18.58.26 1.17.87 1.17h.2c.41 0 .74-.29.88-.67c.32-.89 1.27-1.5 2.3-1.28c.95.2 1.65 1.13 1.57 2.1c-.1 1.34-1.62 1.63-2.45 2.88c0 .01-.01.01-.01.02c-.01.02-.02.03-.03.05c-.09.15-.18.32-.25.5c-.01.03-.03.05-.04.08c-.01.02-.01.04-.02.07c-.12.34-.2.75-.2 1.25h2c0-.42.11-.77.28-1.07c.02-.03.03-.06.05-.09c.08-.14.18-.27.28-.39c.01-.01.02-.03.03-.04c.1-.12.21-.23.33-.34c.96-.91 2.26-1.65 1.99-3.56c-.24-1.74-1.61-3.21-3.35-3.47z" />
+        </svg>
+        <span>Help</span>
+      </div>
+      <div class="flex items-center px-5 py-3 space-x-6 rounded hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17l-.59.59l-.58.58V4h16v12zm-9-4h2v2h-2zm0-6h2v4h-2z" />
+        </svg>
+        <span>Send feedback</span>
+      </div>
+      <hr class="text-gray-400" />
+      <div class="text-sm font-semibold px-7 py-3 text-zinc-600">
+        <a href="https://about.youtube/">About</a>
+        <a href="https://blog.youtube/">Press</a>
+        <a href="https://www.youtube.com/howyoutubeworks/policies/copyright/">Copyright</a>
+      </div>
+      <div class="text-sm font-semibold px-7 py-3 text-zinc-600">
+        <a href="https://www.youtube.com/t/contact_us/">Contact us</a>
+        <a href="https://www.youtube.com/creators/">Creators</a>
+      </div>
+      <div class="text-sm font-semibold px-7 py-3 text-zinc-600">
+        <a href="https://www.youtube.com/ads/">Advertise</a>
+        <a href="https://developers.google.com/youtube">Developers</a>
+      </div>
+      <div class="text-sm font-semibold px-7 py-3 text-zinc-600">
+        <a href="https://www.youtube.com/t/terms">Terms</a>
+        <a href="https://policies.google.com/privacy?hl=en">Privacy</a>
+        <a href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/"> Policy & Safety</a>
+      </div>
+      <div class="text-sm font-semibold px-7 py-3 text-zinc-600">
+        <a
+          href="https://www.youtube.com/howyoutubeworks/?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen">
+          How You Tube works</a>
+      </div>
+      <div class="text-sm font-semibold px-7 py-3 text-zinc-600">
+        <a href="https://www.youtube.com/new">Test new features</a>
+      </div>
+
+      <div class="text-xs text-gray-500 my-3 pl-7">@ 2023 Google LLC</div>
     </div>
   </section>
   <!-- End of left menu section -->
 
-  <!-- tags section -->
-  <section class="">
-    <div class="flex items-center justify-center">
-      <div
-        class="border border-gray-200 p-1 mr-5 px-5 rounded bg-zinc-800 text-white transform transition-all hover:scale-105">
-        All</div>
-      <div class="border border-gray-200 p-1 mr-5  px-5rounded bg-gray-200 transform transition-all hover:scale-105">
-        Mixes
-      </div>
-      <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">Css
-      </div>
-      <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
-        Music
-      </div>
-      <div class="border border-gray-200 p-1 mr-5  px-5rounded bg-gray-200 transform transition-all hover:scale-105">
-        Computers and
-        information</div>
-      <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
-        Computers
-      </div>
-      <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
-        Tamil
-        Cinema
-      </div>
-      <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
-        A.R.Rahman
-      </div>
-      <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
-        Software Testing
-      </div>
-      <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
-        Live
-      </div>
-      <!-- <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
+  <div>
+    <!-- right section -->
+
+    <div class="float-right">
+      <!-- tags section -->
+      <section>
+        <div class="flex items-center justify-center">
+          <div
+            class="border border-gray-200 p-1 mr-5 px-5 rounded bg-zinc-800 text-white transform transition-all hover:scale-105">
+            All</div>
+          <div
+            class="border border-gray-200 p-1 mr-5  px-5rounded bg-gray-200 transform transition-all hover:scale-105">
+            Mixes
+          </div>
+          <div
+            class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
+            Css
+          </div>
+          <div
+            class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
+            Music
+          </div>
+          <div
+            class="border border-gray-200 p-1 mr-5  px-5rounded bg-gray-200 transform transition-all hover:scale-105">
+            Computers and
+            information</div>
+          <div
+            class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
+            Computers
+          </div>
+          <div
+            class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
+            Tamil
+            Cinema
+          </div>
+          <div
+            class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
+            A.R.Rahman
+          </div>
+          <div
+            class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
+            Software Testing
+          </div>
+          <!-- <div
+            class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
+            Live
+          </div>
+           <div class="border border-gray-200 p-1 mr-5 px-5 rounded bg-gray-200 transform transition-all hover:scale-105">
         Class
       </div> -->
-    </div>
-  </section>
-  <!-- End of tags section -->
-
-  <!-- videos section -->
-  <section>
-    <div class="flex items-center space-x-4 px-10 py-5">
-      <!-- first video -->
-      <div>
-        <iframe width="410" height="230" src="https://www.youtube.com/embed/HPdK5__SBu8?si=MTkqOu64e3gloKZE"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen class="rounded-2xl"></iframe>
-        <div class="pt-3 items-center">
-          <div class="flex items-center space-x-2">
-            <img src="./public/images/v-1.png" alt="CyberDude" width="50" height="50" class="rounded-full object-cover">
-            <p class="font-semibold text-md">Day 25: Let's Customize Tailwindcss CSS |... <br> Deployment - CyberDude
-              Live
-              Internship
-            </p>
-          </div>
-          <span class="text-sm text-gray-800 pl-14">CyberDude Networks Pvt. Ltd.</span><br>
-          <span class="text-sm text-gray-800 pl-14">667 views . Streamed 21 hours ago</span>
-        </div>
-      </div>
-      <!-- second video -->
-      <div>
-        <iframe width="410" height="230" src="https://www.youtube.com/embed/QvjznpRVaa8?si=M6BAyeIdYe1UyYi8"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen class="rounded-2xl"></iframe>
-        <div class="pt-3 items-center">
-          <div class="flex items-center space-x-2">
-            <img src="./public/images/v-2.png" alt="CyberDude" width="50" height="50" class="rounded-full object-cover">
-            <p class="font-semibold text-md">"I understand English but not able to speak <br>fluently." - Reasons and
-              solutions - Day 1 "</p>
-          </div>
-          <span class="text-sm text-gray-800 pl-14">Learn With Sam And Ash.</span><br>
-          <span class="text-sm text-gray-800 pl-14">1.2M views . 8 months ago</span>
-
-        </div>
-      </div>
-
-      <!-- third video -->
-      <div>
-        <iframe width="410" height="230" src="https://www.youtube.com/embed/EOrzE8V7OoE?si=nwfIE-s80ANfCdn5"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen class="rounded-2xl"></iframe>
-        <div class="pt-3 items-center">
-          <div class="flex items-center space-x-2">
-            <img src="./public/images/v-3.png" alt="CyberDude" width="50" height="50" class="rounded-full object-cover">
-            <p class="font-semibold text-md">Switch from 15000/Month to 25LPA | How <br> she learned DSA for Interviews
-            </p>
-          </div>
-          <span class="text-sm text-gray-800 pl-14 flex items-center">Fraz
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="pl-1">
-              <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41L9 16.17z" />
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+              class="border border-gray-200 rounded bg-gray-200 transform transition-all hover:scale-105">
+              <path fill="currentColor" d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6l-6 6l-1.41-1.41z" />
             </svg>
-          </span>
-          <span class="text-sm text-gray-800 pl-14">119k views . 13 days ago</span>
-
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+      <!-- End of tags section -->
 
-    <div class="flex items-center space-x-4 px-10 py-5">
-      <!-- fourth video -->
-      <div>
-        <div>
-          <iframe width="410" height="230" src="https://www.youtube.com/embed/99DfqUcMXfA?si=m6AGH4sQB_pANDT5"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen class="rounded-2xl"></iframe>
-          <div class="pt-3 items-center">
-            <div class="flex items-center space-x-2">
-              <img src="./public/images/v-4.jpg" alt="CyberDude" width="50" height="50"
-                class="rounded-full object-cover">
-              <p class="font-semibold text-md">Venkatesh Bhat makes Brinji | recipe in Tamil | <br>Brinji
-              </p>
+      <!-- videos section -->
+      <section class="mt-5">
+        <div class="flex items-center space-x-4 px-10 py-5 ">
+          <!-- first video -->
+          <div class="transform transition-all hover:scale-105">
+            <iframe width="390" height="230" src="https://www.youtube.com/embed/HPdK5__SBu8?si=MTkqOu64e3gloKZE"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen class="rounded-2xl"></iframe>
+            <div class="pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/v-1.png" alt="CyberDude" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">Day 25: Let's Customize Tailwindcss CSS |... <br> Deployment -
+                  CyberDude
+                  Live
+                  Internship
+                </p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14">CyberDude Networks Pvt. Ltd.</span><br>
+              <span class="text-sm text-gray-800 pl-14">667k views . Streamed 21 hours ago</span>
             </div>
-            <span class="text-sm text-gray-800 pl-14">Venkatesh Bhat's Idhayam Thotta Samayal</span><br>
-            <span class="text-sm text-gray-800 pl-14">3.9M iews . 2 years ago</span>
+          </div>
+          <!-- second video -->
+          <div class="transform transition-all hover:scale-105">
+            <iframe width="390" height="230" src="https://www.youtube.com/embed/QvjznpRVaa8?si=M6BAyeIdYe1UyYi8"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen class="rounded-2xl"></iframe>
+            <div class="pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/eng.jpg" alt="CyberDude" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">"I understand English but not able to speak <br>fluently." - Reasons
+                  and
+                  solutions - Day 1 "</p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14">Learn With Sam And Ash.</span><br>
+              <span class="text-sm text-gray-800 pl-14">1.2M views . 8 months ago</span>
+
+            </div>
+          </div>
+
+          <!-- third video -->
+          <div class="transform transition-all hover:scale-105">
+            <iframe width="390" height="230" src="https://www.youtube.com/embed/EOrzE8V7OoE?si=nwfIE-s80ANfCdn5"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen class="rounded-2xl"></iframe>
+            <div class="pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/1.jpg" alt="CyberDude" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">Switch from 15000/Month to 25LPA | How <br> she learned DSA for
+                  Interviews
+                </p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14 flex items-center">Fraz
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="pl-1">
+                  <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+              </span>
+              <span class="text-sm text-gray-800 pl-14">119k views . 13 days ago</span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4 px-10 py-5">
+          <!-- fourth video -->
+          <div class="transform transition-all hover:scale-105">
+            <div>
+              <iframe width="390" height="230" src="https://www.youtube.com/embed/99DfqUcMXfA?si=m6AGH4sQB_pANDT5"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="rounded-2xl"></iframe>
+              <div class="pt-3 items-center">
+                <div class="flex items-center space-x-2">
+                  <img src="./public/images/v-4.jpg" alt="CyberDude" width="50" height="50"
+                    class="rounded-full object-cover">
+                  <p class="font-semibold text-md">Venkatesh Bhat makes Brinji | recipe in Tamil | <br>Brinji
+                  </p>
+                </div>
+                <span class="text-sm text-gray-800 pl-14">Venkatesh Bhat's Idhayam Thotta Samayal</span><br>
+                <span class="text-sm text-gray-800 pl-14">3.9M iews . 2 years ago</span>
+
+              </div>
+            </div>
+          </div>
+          <!-- fifth video -->
+          <div class="transform transition-all hover:scale-105">
+            <div>
+              <iframe width="390" height="230" src="https://www.youtube.com/embed/MEZzfwJ430k?si=0ZalzGkuXKFjRN8i"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="rounded-2xl"></iframe>
+            </div>
+            <div class="pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/v-5.png" alt="CyberDude" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">Feel good vibes songs! #songs <br>#music
+                </p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14">Song Sony</span><br>
+              <span class="text-sm text-gray-800 pl-14">129k views . 1 year ago</span>
+
+            </div>
+          </div>
+          <!-- sixth video -->
+          <div class="transform transition-all hover:scale-105">
+            <div>
+              <iframe width="390" height="230" src="https://www.youtube.com/embed/xqOdFnB0b6s?si=WQdwwCimb-Z3Z1Ux"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="rounded-2xl"></iframe>
+            </div>
+            <div class=" pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/l-6.jpg" alt="CyberDude" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">Aradhya - Lyrical | Kushi | Vijay Deverakonda <br>Samantha | Hesham
+                  Abdul
+                  Whad | sid...
+                </p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14">Saregama Tamil</span><br>
+              <span class="text-sm text-gray-800 pl-14">9.9 Mviews . 3 months ago</span>
+
+
+            </div>
+
 
           </div>
         </div>
-      </div>
-      <!-- fifth video -->
-      <div>
-        <div>
-          <iframe width="410" height="230" src="https://www.youtube.com/embed/MEZzfwJ430k?si=0ZalzGkuXKFjRN8i"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen class="rounded-2xl"></iframe>
+      </section>
+      <!-- End of videos section -->
+
+      <!-- shorts section -->
+      <section class="justify-center">
+        <div class="flex items-center space-x-1 pl-20">
+          <img src="./public/images/utube-shorts.png" alt="shorts" width="20" height="20">
+          <h4 class="font-semibold text-lg p-5">Shorts</h4>
         </div>
-        <div class="pt-3 items-center">
-          <div class="flex items-center space-x-2">
-            <img src="./public/images/v-5.png" alt="CyberDude" width="50" height="50" class="rounded-full object-cover">
-            <p class="font-semibold text-md">Feel good vibes songs! #songs <br>#music
-            </p>
+        <div class="flex items-center space-x-10 pl-24 ">
+          <div class="space-y-36 transform transition-all hover:scale-105">
+            <div class="w-60 h-72">
+              <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;"><iframe
+                  src="https://www.youtube.com/embed/WWuzivzAJ0Y"
+                  style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+                  scrolling="no" allow="encrypted-media;" class="rounded-lg"></iframe></div>
+            </div></video>
+            <div>
+              <p>Sathya ku vandha sodhanai| <br> daddy kedi | JUST FOR FUN...</p>
+              <span class="text-sm text-gray-800">1.7k views</span>
+            </div>
           </div>
-          <span class="text-sm text-gray-800 pl-14">Song Sony</span><br>
-          <span class="text-sm text-gray-800 pl-14">129k views . 1 year ago</span>
+
+          <div class="space-y-36 transform transition-all hover:scale-105">
+            <div class="w-60 h-72">
+              <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;"><iframe
+                  src="https://www.youtube.com/embed/MgBlggqcGgw"
+                  style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+                  scrolling="no" allow="encrypted-media;" class="rounded-lg"></iframe></div>
+            </div>
+            <div>
+              <p>Thean Thean - The Name is <br>Vidhyasagar Live in Concert...</p>
+              <span class="text-sm text-gray-800">2.2M views</span>
+            </div>
+          </div>
+
+          <div class="space-y-36 transform transition-all hover:scale-105">
+            <div class="w-60 h-72">
+              <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;"><iframe
+                  src="https://www.youtube.com/embed/x6dRYvWGFug"
+                  style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+                  scrolling="no" allow="encrypted-media;" class="rounded-lg"></iframe></div>
+            </div>
+            <div>
+              <p>I gave my first TEDX Talk! 🥹 <br> ❤️</p>
+              <span class="text-sm text-gray-800">597k views</span>
+            </div>
+          </div>
+
+
+          <!-- <div class="space-y-36 transform transition-all hover:scale-105">
+            <div class="w-60 h-72">
+              <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;"><iframe
+                  src="https://www.youtube.com/embed/P2dI2bnpdEQ"
+                  style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+                  scrolling="no" allow="encrypted-media;" class="rounded-lg"></iframe></div>
+            </div>
+            <div>
+              <p>Dhanush about <br> samuthirakani |#dhanush...</p>
+              <span class="text-sm text-gray-800">6.2M views</span>
+            </div>
+          </div> -->
+
+          <div class="space-y-36 transform transition-all hover:scale-105">
+            <div class="w-60 h-72">
+              <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;"><iframe
+                  src="https://www.youtube.com/embed/uCG8qEu9wGA"
+                  style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+                  scrolling="no" allow="encrypted-media;" class="rounded-lg"></iframe></div>
+            </div>
+            <div>
+              <p>Airport Mini Vlog! ❤️ <br> #travel #shorts #trending...</p>
+              <span class="text-sm text-gray-800">3.1M views</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex items-center border border-gray-400 rounded-full w-80 justify-center mx-auto p-1 my-5 space-x-6 transform transition-all hover:bg-gray-100 hover:scale-110">
+          <input type="button" value="Show more">
+          <span class=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222l4.95 4.95Z" />
+            </svg></span>
+        </div>
+
+      </section>
+      <!-- End of shorts section -->
+
+      <!-- second video section -->
+      <section>
+        <div class="flex items-center space-x-4 px-10 py-5">
+          <div class="transform transition-all hover:scale-105">
+            <div>
+              <iframe width=" 390" height="230" src="https://www.youtube.com/embed/M5JJxdrCvJQ?si=JQuh3Fsqh3fz44_m"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="rounded-2xl"></iframe>
+            </div>
+            <div class=" pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/v2-2.jpg" alt="website" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">How to create a full website using HTML & <br>CSS | strp-bt-step
+                  website
+                  tutorial
+                </p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14">PRAROZ</span><br>
+              <span class="text-sm text-gray-800 pl-14">357k views . 2 years ago</span>
+
+            </div>
+          </div>
+
+          <div class="transform transition-all hover:scale-105">
+            <iframe width="390" height="230" src="https://www.youtube.com/embed/zVk6Fuj5jwU?si=7q5nsNPPzeUGAIgF"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen class="rounded-2xl"></iframe>
+
+            <div class=" pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/v2-3.jpg" alt="strength india" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md"><span class="font-semibold">Brain Detox | </span>மூளை நச்சுத்தன்மை <br>
+                  மற்றும் தூக்கமின்மையை...
+
+                </p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14">Strength India ovement</span><br>
+              <span class="text-sm text-gray-800 pl-14">357k views . 2 years ago</span>
+
+            </div>
+          </div>
+
+          <div class="transform transition-all hover:scale-105">
+            <div>
+              <iframe width="390" height="230" src="https://www.youtube.com/embed/kHfhg0-sUdk?si=MZAZaesSqQ1pFJtj"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="rounded-2xl"></iframe>
+            </div>
+            <div class=" pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/v2-4.jpg" alt="website" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">This is really out of the world. 🖤🖤🖤 | Flute <br> Cover by Rajesh
+                  Cherthala tutorial
+                </p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14">Camrin Films Wedding Photography</span><br>
+              <span class="text-sm text-gray-800 pl-14">9.7M views . 3 years ago</span>
+
+            </div>
+          </div>
 
         </div>
-      </div>
-      <!-- sixth video -->
-      <div>
-        <iframe width="410" height="230" src="https://www.youtube.com/embed/xqOdFnB0b6s?si=WQdwwCimb-Z3Z1Ux"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen class="rounded-2xl"></iframe>
-        <div class=" pt-3 items-center">
-          <div class="flex items-center space-x-2">
-            <img src="./public/images/v-5.png" alt="CyberDude" width="50" height="50" class="rounded-full object-cover">
-            <p class="font-semibold text-md">Aradhya - Lyrical | Kushi | Vijay Deverakonda <br>Samantha | Hesham Abdul
-              Whad | sid...
-            </p>
-          </div>
-          <span class="text-sm text-gray-800 pl-14">Saregama Tamil</span><br>
-          <span class="text-sm text-gray-800 pl-14">9.9 Mviews . 3 months ago</span>
 
+        <div class="flex items-center space-x-4 px-10 py-5">
+          <div class="transform transition-all hover:scale-105">
+            <div>
+              <iframe width="390" height="230" src="https://www.youtube.com/embed/9elfN9-_bWQ?si=gGhDnq92xNqqUda9"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="rounded-2xl"></iframe>
+            </div>
+            <div class=" pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/3.jpg" alt="website" width="50" height="70" class="rounded-full object-cover">
+                <p class="font-semibold text-md"><span>Bangkok-இல் நடந்தது என்ன | Vj Siddhu</span> <br> Vlogs |Surya
+                  Exclusive
+                  Interview |
+                  RealOne...</p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14">RealOne Cinema</span><br>
+              <span class="text-sm text-gray-800 pl-14">28k views . 10 hours ago</span>
+
+            </div>
+
+          </div>
+
+          <div class="transform transition-all hover:scale-105">
+            <div>
+              <iframe width="390" height="230" src="https://www.youtube.com/embed/sB34sRehUvU?si=lQel7FYl63DsNEDH"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="rounded-2xl"></iframe>
+            </div>
+            <div class=" pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/v-last.png" alt="website" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">Befriend Yourself | Nivetha Thomas | <br> TEDxOMCH</p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14 flex items-center">TEDxTalks <span><svg
+                    xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                    class="text-gray-800 ml-2">
+                    <path fill="currentColor"
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10Zm-.997-6l7.07-7.071l-1.413-1.414l-5.657 5.657l-2.829-2.829l-1.414 1.414L11.003 16Z" />
+                  </svg></span> </span>
+              <span class="text-sm text-gray-800 pl-14">6.6M views . 4 years ago</span>
+
+            </div>
+          </div>
+
+          <div class="transform transition-all hover:scale-105">
+            <div>
+              <iframe width="390" height="230" src="https://www.youtube.com/embed/fYq5PXgSsbE?si=CFU4xExZ0y1ysXMX"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="rounded-2xl"></iframe>
+            </div>
+            <div class=" pt-3 items-center">
+              <div class="flex items-center space-x-2">
+                <img src="./public/images/v2-6.jpg" alt="website" width="50" height="50"
+                  class="rounded-full object-cover">
+                <p class="font-semibold text-md">Learn Flexbox in 15 minutes</p>
+              </div>
+              <span class="text-sm text-gray-800 pl-14 flex items-center">Web Dev Simplifed <span><svg
+                    xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                    class="text-gray-800 ml-2">
+                    <path fill="currentColor"
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10Zm-.997-6l7.07-7.071l-1.413-1.414l-5.657 5.657l-2.829-2.829l-1.414 1.414L11.003 16Z" />
+                  </svg></span> </span>
+              <span class="text-sm text-gray-800 pl-14">1M views . 5 years ago</span>
+
+            </div>
+          </div>
         </div>
-      </div>
+
+      </section>
+      <!-- End of second video section -->
+
     </div>
-  </section>
-  <!-- End of videos section -->
+
+    <!-- End of right section -->
+  </div>
 </body>
 
 </html>
